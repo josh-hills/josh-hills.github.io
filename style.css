@@ -330,6 +330,16 @@ a.publication-thumbnail:hover {
   filter: saturate(0.85) sepia(0.05);
 }
 
+.publication-thumbnail--contain {
+  object-fit: contain;
+  background: #120b10;
+  filter: none;
+}
+
+a:hover > .publication-thumbnail--contain {
+  filter: none;
+}
+
 .publication-content h3 {
   font-family: var(--font-serif);
   font-size: var(--font-size-lg);
