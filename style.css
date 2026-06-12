@@ -9,6 +9,8 @@
   --accent: #7c4ddb;
   --accent-hover: #6336c4;
   --accent-soft: rgba(124, 77, 219, 0.13);
+  --link: #0c7d99;
+  --link-hover: #095d73;
   --border: #e1e1d8;
 
   --font-display: 'Fraunces', Georgia, serif;
@@ -35,6 +37,8 @@
   --accent: #bd93f9;
   --accent-hover: #d4b8ff;
   --accent-soft: rgba(189, 147, 249, 0.16);
+  --link: #8be9fd;
+  --link-hover: #b6f1ff;
   --border: #44475a;
 }
 
@@ -371,12 +375,13 @@ a.publication-thumbnail:hover {
 .publication-link {
   font-family: var(--font-mono);
   font-size: 0.78rem;
-  font-weight: 400;
-  color: var(--text-muted);
+  font-weight: 500;
+  color: var(--link);
 }
 
 .publication-link:hover {
-  color: var(--accent);
+  color: var(--link-hover);
+  text-decoration: underline;
 }
 
 .footer-spacer {
