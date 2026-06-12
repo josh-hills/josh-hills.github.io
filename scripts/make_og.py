@@ -8,10 +8,10 @@ import pathlib
 from PIL import Image, ImageDraw, ImageFont
 
 WIDTH, HEIGHT = 1200, 630
-BG = (22, 20, 15)
-INK = (234, 230, 223)
-MUTED = (154, 148, 138)
-ACCENT = (217, 138, 111)
+BG = (40, 42, 54)
+INK = (248, 248, 242)
+MUTED = (98, 114, 164)
+ACCENT = (189, 147, 249)
 MARGIN = 90
 
 SERIF = "/usr/share/fonts/truetype/dejavu/DejaVuSerif.ttf"

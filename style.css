@@ -1,15 +1,15 @@
 @import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400&family=Manrope:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap');
 
 :root {
-  --bg: #fbfbf8;
-  --bg-soft: #f1f1ea;
-  --text: #1a1c1e;
-  --text-secondary: #3f4347;
-  --text-muted: #797d83;
-  --accent: #1f7a63;
-  --accent-hover: #155c4a;
-  --accent-soft: rgba(31, 122, 99, 0.12);
-  --border: #e6e6df;
+  --bg: #f8f8f2;
+  --bg-soft: #ededf0;
+  --text: #282a36;
+  --text-secondary: #3a3d4d;
+  --text-muted: #6272a4;
+  --accent: #7c4ddb;
+  --accent-hover: #6336c4;
+  --accent-soft: rgba(124, 77, 219, 0.13);
+  --border: #e1e1d8;
 
   --font-display: 'Fraunces', Georgia, serif;
   --font-sans: 'Manrope', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
@@ -27,15 +27,15 @@
 }
 
 [data-theme="dark"] {
-  --bg: #0f1113;
-  --bg-soft: #1a1d20;
-  --text: #e9e9e6;
-  --text-secondary: #bfc2c5;
-  --text-muted: #888d92;
-  --accent: #54c4a5;
-  --accent-hover: #6fd3b7;
-  --accent-soft: rgba(84, 196, 165, 0.14);
-  --border: #262a2e;
+  --bg: #282a36;
+  --bg-soft: #21222c;
+  --text: #f8f8f2;
+  --text-secondary: #e2e3ee;
+  --text-muted: #6272a4;
+  --accent: #bd93f9;
+  --accent-hover: #d4b8ff;
+  --accent-soft: rgba(189, 147, 249, 0.16);
+  --border: #44475a;
 }
 
 ::selection {
