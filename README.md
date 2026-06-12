@@ -4,9 +4,19 @@ Minimalist static personal site for Josh Hills.
 
 ## Structure
 
-- `index.html` — single-page content (intro, about, links, publications)
-- `style.css` — styling (light + automatic dark mode, mobile responsive)
+- `index.html` — single-page content (header, about, icon links, publications)
+- `style.css` — design system (warm light + dark theme toggle, mobile responsive)
 - `assets/cv.pdf` — resume
+- `assets/profile.jpg` — portrait shown beside the about text
+  (**currently a generated placeholder — replace with a real headshot**,
+  ~180×220 or any portrait ratio)
+- `assets/figures/` — publication thumbnails
+- `assets/og.png` — social/link preview image
+
+The visual design mirrors
+[hrdkbhatnagar.github.io](https://hrdkbhatnagar.github.io/) (Newsreader /
+Instrument Serif / Manrope, warm palette, dashed dividers, left-aligned
+publication thumbnails), rebuilt as a dependency-free static page.
 
 ## Local preview
 

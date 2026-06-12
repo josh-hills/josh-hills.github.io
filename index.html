@@ -17,11 +17,14 @@
   <meta name="twitter:card" content="summary_large_image" />
 
   <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
-
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400&family=Inter:wght@400;500&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="style.css" />
+
+  <script>
+    (function () {
+      const theme = localStorage.getItem('theme') || 'light';
+      document.documentElement.setAttribute('data-theme', theme);
+    })();
+  </script>
 
   <script type="application/ld+json">
   {
@@ -49,90 +52,158 @@
   </script>
 </head>
 <body>
-  <main>
-    <header class="intro">
-      <h1>Josh Hills</h1>
-      <p class="tagline">AI Security Researcher</p>
+  <div class="container">
+    <header class="header">
+      <a href="/" class="logo">Josh Hills</a>
+
+      <button class="menu-toggle" id="menu-toggle" aria-label="Toggle menu">
+        <svg class="menu-icon" xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+        <svg class="close-icon" xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+      </button>
+
+      <nav class="nav" id="nav">
+        <a href="#about" class="nav-link">About</a>
+        <a href="#publications" class="nav-link">Publications</a>
+        <button class="theme-toggle" id="theme-toggle" aria-label="Toggle dark mode">
+          <svg class="sun-icon" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
+          <svg class="moon-icon" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+        </button>
+      </nav>
     </header>
 
-    <section class="about">
-      <p>
-        I'm an AI security research engineer focused on dangerous capability
-        evaluations, AI control, and red-teaming. I'm currently a Research
-        Scientist and Astra Fellow at
-        <a href="https://www.constellation.org/">Constellation</a>, mentored by
-        Asa Cooper Stickland (UK AISI), where I build persistent-state control
-        settings that test monitor-evasion strategies in agentic coding
-        environments.
-      </p>
-      <p>
-        Over the past two years I've built evaluations at
-        <a href="https://metr.org/">METR</a>, UK AISI, and
-        <a href="https://www.redwoodresearch.org/">Redwood Research</a>. At
-        Redwood I built LinuxArena control settings end-to-end and implemented
-        red-team side tasks for the shared ControlArena infrastructure. At METR
-        I contributed to HCAST and created one of their largest
-        self-proliferation evaluations, assessing whether LLM agents can
-        autonomously acquire compute.
-      </p>
-      <p>
-        I hold a B.Sc. (Honours) in Computer Science with an AI/ML
-        specialization from Carleton University.
-      </p>
-    </section>
+    <main>
+      <section class="about-section" id="about">
+        <div class="about-content">
+          <p>
+            I'm an AI security research engineer focused on dangerous capability
+            evaluations, AI control, and red-teaming. I'm currently a Research
+            Scientist and Astra Fellow at
+            <a href="https://www.constellation.org/" target="_blank" rel="noopener">Constellation</a>,
+            mentored by Asa Cooper Stickland (UK AISI), where I build
+            persistent-state control settings that test monitor-evasion strategies
+            in agentic coding environments.
+          </p>
+          <p>
+            Over the past two years I've built evaluations at
+            <a href="https://metr.org/" target="_blank" rel="noopener">METR</a>,
+            UK AISI, and
+            <a href="https://www.redwoodresearch.org/" target="_blank" rel="noopener">Redwood Research</a>.
+            At Redwood I built LinuxArena control settings end-to-end and
+            implemented red-team side tasks for the shared ControlArena
+            infrastructure. At METR I contributed to HCAST and created one of their
+            largest self-proliferation evaluations, assessing whether LLM agents
+            can autonomously acquire compute.
+          </p>
+          <p>
+            I hold a B.Sc. (Honours) in Computer Science with an AI/ML
+            specialization from Carleton University.
+          </p>
 
-    <nav class="links" aria-label="Profiles and contact">
-      <a href="mailto:joshtomhills@gmail.com">Email</a>
-      <a href="assets/cv.pdf">CV</a>
-      <a href="https://github.com/josh-hills">GitHub</a>
-      <a href="https://scholar.google.com/citations?hl=en&user=tbsg-JQAAAAJ">Scholar</a>
-      <a href="https://www.linkedin.com/in/josh~hills/">LinkedIn</a>
-    </nav>
+          <div class="about-links">
+            <a href="mailto:joshtomhills@gmail.com" class="about-link">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+              Email
+            </a>
+            <a href="assets/cv.pdf" class="about-link" target="_blank" rel="noopener">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
+              CV
+            </a>
+            <a href="https://github.com/josh-hills" class="about-link" target="_blank" rel="noopener">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+              GitHub
+            </a>
+            <a href="https://scholar.google.com/citations?hl=en&user=tbsg-JQAAAAJ" class="about-link" target="_blank" rel="noopener">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"></path><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"></path></svg>
+              Scholar
+            </a>
+            <a href="https://www.linkedin.com/in/josh~hills/" class="about-link" target="_blank" rel="noopener">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.34V9h3.42v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.45v6.29zM5.34 7.43a2.06 2.06 0 1 1 0-4.13 2.06 2.06 0 0 1 0 4.13zM7.12 20.45H3.56V9h3.56v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.72v20.56C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.72V1.72C24 .77 23.2 0 22.22 0z"></path></svg>
+              LinkedIn
+            </a>
+          </div>
+        </div>
 
-    <section class="publications">
-      <h2>Publications</h2>
+        <div class="about-image">
+          <img src="assets/profile.jpg" alt="Josh Hills" class="profile-image" />
+        </div>
+      </section>
 
-      <article class="pub">
-        <h3>Think Fast: Estimating No-CoT Task-Completion Time Horizons of Frontier AI Models</h3>
-        <p class="authors">
-          D. Gould*, F. R. Ward*, A. C. Woodruff, R. Arike, <strong>J. Hills</strong>, A. Serrano,
-          I. Caspary, J. R. Brown, J. J. Jiao, P. Leask, T. Stone, R. Potham, I. G. Stan, H. Mayne,
-          S. Hellsten, S. Biswas, A. Azarbal, W. L. Anderson, E. Najt, R. Greenblatt, J. Stastny
-        </p>
-        <p class="venue">
-          NeurIPS 2026 (under review) ·
-          <a href="https://arxiv.org/abs/2606.07157">Paper</a>
-        </p>
-        <a class="pub-figure" href="assets/figures/think-fast.png">
-          <img src="assets/figures/think-fast.png" loading="lazy"
-               alt="No-CoT task-completion time horizons of frontier models, with a doubling trend compared against METR." />
-        </a>
-      </article>
+      <section id="publications">
+        <h2 class="section-title">Publications</h2>
 
-      <article class="pub">
-        <h3>LinuxArena: A Control Setting for AI Agents in Live Production Software Environments</h3>
-        <p class="authors">
-          T. Tracy, R. Potham, N. Kuhn, M. Heller, A. Khandelwal, C. Rushing, &hellip; <strong>J. Hills</strong>, et al.
-        </p>
-        <p class="venue">
-          NeurIPS 2026 Datasets &amp; Benchmarks Track (under review) ·
-          <a href="https://arxiv.org/abs/2604.15384">Paper</a> ·
-          <a href="https://linuxarena.ai">Website</a>
-        </p>
-      </article>
+        <div class="publications-list">
+          <article class="publication-item">
+            <a href="https://arxiv.org/abs/2606.07157" target="_blank" rel="noopener">
+              <img src="assets/figures/think-fast.png" alt="Thumbnail for Think Fast" class="publication-thumbnail" loading="lazy" />
+            </a>
+            <div class="publication-content">
+              <h3><a href="https://arxiv.org/abs/2606.07157" target="_blank" rel="noopener">Think Fast: Estimating No-CoT Task-Completion Time Horizons of Frontier AI Models</a></h3>
+              <p class="publication-authors">
+                D. Gould*, F. R. Ward*, A. C. Woodruff, R. Arike, <span class="highlight">J. Hills</span>, A. Serrano,
+                I. Caspary, J. R. Brown, J. J. Jiao, P. Leask, T. Stone, R. Potham, I. G. Stan, H. Mayne,
+                S. Hellsten, S. Biswas, A. Azarbal, W. L. Anderson, E. Najt, R. Greenblatt, J. Stastny
+              </p>
+              <div class="publication-meta">
+                <span class="publication-venue">NeurIPS 2026 (under review)</span>
+                <span class="meta-separator">·</span>
+                <a href="https://arxiv.org/abs/2606.07157" class="publication-link" target="_blank" rel="noopener">Paper</a>
+              </div>
+            </div>
+          </article>
 
-      <article class="pub">
-        <h3>Distributed Attacks in Persistent-State AI Control</h3>
-        <p class="authors">
-          <strong>J. Hills</strong>*, I. Caspary*, R. Arcucci, A. Cooper Stickland
-        </p>
-        <p class="venue">COLM 2026 (under review)</p>
-        <a class="pub-figure" href="assets/figures/distributed-attacks.png">
-          <img src="assets/figures/distributed-attacks.png" loading="lazy"
-               alt="Honest, positional, and gradual attack sequences across pull requests under a monitor in a persistent-state control setting." />
-        </a>
-      </article>
-    </section>
-  </main>
+          <article class="publication-item">
+            <a href="https://linuxarena.ai" target="_blank" rel="noopener">
+              <div class="publication-thumbnail"></div>
+            </a>
+            <div class="publication-content">
+              <h3><a href="https://linuxarena.ai" target="_blank" rel="noopener">LinuxArena: A Control Setting for AI Agents in Live Production Software Environments</a></h3>
+              <p class="publication-authors">
+                T. Tracy, R. Potham, N. Kuhn, M. Heller, A. Khandelwal, C. Rushing, &hellip; <span class="highlight">J. Hills</span>, et al.
+              </p>
+              <div class="publication-meta">
+                <span class="publication-venue">NeurIPS 2026 Datasets &amp; Benchmarks (under review)</span>
+                <span class="meta-separator">·</span>
+                <a href="https://arxiv.org/abs/2604.15384" class="publication-link" target="_blank" rel="noopener">Paper</a>
+                <span class="meta-separator">·</span>
+                <a href="https://linuxarena.ai" class="publication-link" target="_blank" rel="noopener">Website</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="publication-item">
+            <img src="assets/figures/distributed-attacks.png" alt="Thumbnail for Distributed Attacks in Persistent-State AI Control" class="publication-thumbnail" loading="lazy" />
+            <div class="publication-content">
+              <h3>Distributed Attacks in Persistent-State AI Control</h3>
+              <p class="publication-authors">
+                <span class="highlight">J. Hills</span>*, I. Caspary*, R. Arcucci, A. Cooper Stickland
+              </p>
+              <div class="publication-meta">
+                <span class="publication-venue">COLM 2026 (under review)</span>
+              </div>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <div class="footer-spacer"></div>
+    </main>
+  </div>
+
+  <script>
+    const menuToggle = document.getElementById('menu-toggle');
+    const nav = document.getElementById('nav');
+    menuToggle?.addEventListener('click', () => {
+      nav?.classList.toggle('open');
+      menuToggle.classList.toggle('open');
+    });
+
+    const themeToggle = document.getElementById('theme-toggle');
+    themeToggle?.addEventListener('click', () => {
+      const current = document.documentElement.getAttribute('data-theme');
+      const next = current === 'dark' ? 'light' : 'dark';
+      document.documentElement.setAttribute('data-theme', next);
+      localStorage.setItem('theme', next);
+    });
+  </script>
 </body>
 </html>
