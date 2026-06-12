@@ -30,7 +30,7 @@ def main() -> None:
 
     draw.rectangle([MARGIN, 250, MARGIN + 90, 258], fill=ACCENT)
     draw.text((MARGIN, 285), "Josh Hills", font=name_font, fill=INK)
-    draw.text((MARGIN, 405), "AI Security Researcher", font=sub_font, fill=MUTED)
+    draw.text((MARGIN, 405), "AI Safety Researcher", font=sub_font, fill=MUTED)
     draw.text((MARGIN, 470), "Evaluations \u00b7 AI control \u00b7 red-teaming", font=small_font, fill=MUTED)
     draw.text((MARGIN, HEIGHT - 90), "josh-hills.github.io", font=small_font, fill=ACCENT)
 
