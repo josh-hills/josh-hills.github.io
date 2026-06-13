@@ -414,7 +414,7 @@ a.publication-thumbnail:hover {
   }
 
   .about-section {
-    flex-direction: column;
+    flex-direction: column-reverse;
     align-items: flex-start;
     gap: var(--space-lg);
   }
