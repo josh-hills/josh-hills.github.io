@@ -11,6 +11,8 @@
   --accent-soft: rgba(124, 77, 219, 0.13);
   --link: #0c7d99;
   --link-hover: #095d73;
+  --award: #a8620a;
+  --award-soft: rgba(255, 184, 108, 0.22);
   --border: #e1e1d8;
 
   --font-display: 'Fraunces', Georgia, serif;
@@ -39,6 +41,8 @@
   --accent-soft: rgba(189, 147, 249, 0.16);
   --link: #8be9fd;
   --link-hover: #b6f1ff;
+  --award: #ffb86c;
+  --award-soft: rgba(255, 184, 108, 0.16);
   --border: #44475a;
 }
 
@@ -365,6 +369,18 @@ a.publication-thumbnail:hover {
   color: var(--accent);
   padding: 3px 8px;
   background: var(--accent-soft);
+  border-radius: 4px;
+}
+
+.publication-award {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+  color: var(--award);
+  padding: 3px 8px;
+  background: var(--award-soft);
   border-radius: 4px;
 }
 
